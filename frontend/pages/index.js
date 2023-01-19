@@ -15,7 +15,7 @@ class Home extends React.Component {
 req1 = async ()=>{
   var res = await axios({
     method: 'get',
-    url: 'http://localhost:8080/res1only',
+    url: '/res1only',
     headers:{'Access-Control-Allow-Origin': '*'}
   });
   console.log(res.data)
@@ -24,7 +24,7 @@ req1 = async ()=>{
 req2 = async ()=>{
   var res = await axios({
     method: 'get',
-    url: 'http://localhost:8080/res1and2',
+    url: '/res1and2',
     headers:{'Access-Control-Allow-Origin': '*'}
   });
   console.log(res.data)
@@ -33,7 +33,7 @@ req2 = async ()=>{
 req3 = async ()=>{
   var res = await axios({
     method: 'get',
-    url: 'http://localhost:8083/res2only',
+    url: '/res2only',
     headers:{'Access-Control-Allow-Origin': '*'}
   });
   console.log(res.data)
@@ -42,7 +42,7 @@ req3 = async ()=>{
 req4 = async ()=>{
   var res = await axios({
     method: 'get',
-    url: 'http://localhost:8083/res2and1',
+    url: '/res2and1',
     headers:{'Access-Control-Allow-Origin': '*'}
   });
   console.log(res.data)
@@ -58,7 +58,7 @@ clearVals = () => {
       
         return (
             <div className="Home">
-                <h1>This is a title line</h1>
+                <h1>VPC Lattice Test</h1>
                 <button onClick={()=>{this.req1()}}>Backend 1 Only Reponse: </button> <div>{this.state.res1}</div>
                 <button onClick={()=>{this.req2()}}>Backend 1 and 2 Reponse: </button> <div>{this.state.res2}</div>
                 <button onClick={()=>{this.req3()}}>Backend 2 Only Reponse: </button> <div>{this.state.res3}</div>
